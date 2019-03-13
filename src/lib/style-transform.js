@@ -77,7 +77,8 @@ const splitRulesPlugin = stylisRuleSheet(rule => {
   splitRules.push(rule)
 })
 
-stylis.use(disableNestingPlugin)
+// Disable disableNestingPlugin to allow other plugins to transform it
+// stylis.use(disableNestingPlugin)
 stylis.use(sourceMapsPlugin)
 stylis.use(splitRulesPlugin)
 stylis.set({
